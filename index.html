@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dressing Room of Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ The Dressing Room of Fashion ✨</h1>
+            <p class="tagline">Your vibe, your style, your perfect outfit</p>
+        </header>
+
+        <div class="style-selector" id="style-selector">
+            <h2>What's Your Vibe Today? 💫</h2>
+            <div class="style-grid">
+                <button class="style-btn" data-style="y2k">
+                    <span class="style-emoji">🌈</span>
+                    <span class="style-name">Y2K Aesthetic</span>
+                </button>
+                <button class="style-btn" data-style="dark-academia">
+                    <span class="style-emoji">📚</span>
+                    <span class="style-name">Dark Academia</span>
+                </button>
+                <button class="style-btn" data-style="cottagecore">
+                    <span class="style-emoji">🌻</span>
+                    <span class="style-name">Cottagecore</span>
+                </button>
+                <button class="style-btn" data-style="streetwear">
+                    <span class="style-emoji">🔥</span>
+                    <span class="style-name">Streetwear</span>
+                </button>
+                <button class="style-btn" data-style="vsco">
+                    <span class="style-emoji">🌊</span>
+                    <span class="style-name">VSCO Girl</span>
+                </button>
+                <button class="style-btn" data-style="egirl">
+                    <span class="style-emoji">🖤</span>
+                    <span class="style-name">E-Girl/E-Boy</span>
+                </button>
+                <button class="style-btn" data-style="minimalist">
+                    <span class="style-emoji">🤍</span>
+                    <span class="style-name">Minimalist</span>
+                </button>
+                <button class="style-btn" data-style="grunge">
+                    <span class="style-emoji">⚡</span>
+                    <span class="style-name">Grunge</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="outfit-generator" id="outfit-generator" style="display: none;">
+            <h2>Your Perfectly Coordinated Look ✨</h2>
+            <div class="outfit-display">
+                <div class="outfit-item top">
+                    <h3>👕 Top</h3>
+                    <div class="outfit-visual" id="outfit-top-visual"></div>
+                    <p id="outfit-top" class="outfit-text"></p>
+                    <div class="shopping-info">
+                        <div class="store-info">
+                            <span id="outfit-top-store" class="store-name"></span>
+                            <span id="outfit-top-price" class="price"></span>
+                        </div>
+                        <p id="outfit-top-suggestion" class="product-suggestion"></p>
+                        <button class="shop-btn" id="shop-top-btn">🛒 Shop This Look</button>
+                    </div>
+                </div>
+                <div class="outfit-item bottom">
+                    <h3>👖 Bottom</h3>
+                    <div class="outfit-visual" id="outfit-bottom-visual"></div>
+                    <p id="outfit-bottom" class="outfit-text"></p>
+                    <div class="shopping-info">
+                        <div class="store-info">
+                            <span id="outfit-bottom-store" class="store-name"></span>
+                            <span id="outfit-bottom-price" class="price"></span>
+                        </div>
+                        <p id="outfit-bottom-suggestion" class="product-suggestion"></p>
+                        <button class="shop-btn" id="shop-bottom-btn">🛒 Shop This Look</button>
+                    </div>
+                </div>
+                <div class="outfit-item shoes">
+                    <h3>👟 Shoes</h3>
+                    <div class="outfit-visual" id="outfit-shoes-visual"></div>
+                    <p id="outfit-shoes" class="outfit-text"></p>
+                    <div class="shopping-info">
+                        <div class="store-info">
+                            <span id="outfit-shoes-store" class="store-name"></span>
+                            <span id="outfit-shoes-price" class="price"></span>
+                        </div>
+                        <p id="outfit-shoes-suggestion" class="product-suggestion"></p>
+                        <button class="shop-btn" id="shop-shoes-btn">🛒 Shop This Look</button>
+                    </div>
+                </div>
+                <div class="outfit-item accessories">
+                    <h3>✨ Accessories</h3>
+                    <div class="outfit-visual" id="outfit-accessories-visual"></div>
+                    <p id="outfit-accessories" class="outfit-text"></p>
+                    <div class="shopping-info">
+                        <div class="store-info">
+                            <span id="outfit-accessories-store" class="store-name"></span>
+                            <span id="outfit-accessories-price" class="price"></span>
+                        </div>
+                        <p id="outfit-accessories-suggestion" class="product-suggestion"></p>
+                        <button class="shop-btn" id="shop-accessories-btn">🛒 Shop This Look</button>
+                    </div>
+                </div>
+            </div>
+            <div class="outfit-summary">
+                <div class="total-price">
+                    <h3>💰 Total Outfit Cost</h3>
+                    <p id="total-cost" class="total-amount">$0</p>
+                    <p class="price-note">*Prices are approximate and may vary</p>
+                </div>
+                <button class="btn primary shop-all-btn" id="shop-all-btn">🛍️ Shop Complete Look</button>
+            </div>
+            <div class="action-buttons">
+                <button class="btn secondary" id="regenerate-btn">🎲 Try Another Look</button>
+                <button class="btn primary" id="back-btn">← Pick Different Vibe</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
